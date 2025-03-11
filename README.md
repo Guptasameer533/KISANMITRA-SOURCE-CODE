@@ -19,6 +19,14 @@ KisanMitra is a smart contract-based farming platform that bridges the gap betwe
 - **Authentication:** JWT-based Authentication
 - **Deployment:** Vercel (Frontend), Render (Backend)
 
+📷 Screenshots
+
+Screenshots are saved in the previewimages folder of the public directory. Below are the available screenshots:
+![Homepage](./public/previewimages/homepage.jpg)
+![Buyer Dashboard](./public/previewimages/buyerdashboard.jpg)
+![Farmer Dashboard](./public/previewimages/farmerdashboard.jpg)
+![Login Page](./public/previewimages/loginpage.jpg)
+
 ## 🔧 Installation & Setup
 1. **Clone the repository**
 ```bash
