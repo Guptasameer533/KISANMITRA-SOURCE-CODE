@@ -61,6 +61,14 @@ The application will start at `http://localhost:3000`
 - The frontend is deployed on **Vercel**.
 - The backend is deployed on **Render**.
 
+## 👥 Contributors
+- [Sameer Gupta](https://github.com/guptasameer533)
+- [Vaishali Gupta](https://github.com/vaishali-gupta32)
+- [Kapil Gupta](https://github.com/kapil-gupta123)
+- [Ayush Kumar Singh]
+- [Sarthak Khandelwal]
+- [Aditya Rai]
+
 ## 🤝 Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for review.
 
