@@ -22,10 +22,10 @@ KisanMitra is a smart contract-based farming platform that bridges the gap betwe
 📷 Screenshots
 
 Screenshots are saved in the previewimages folder of the public directory. Below are the available screenshots:
-![Homepage](./previewimages/homepage.jpg)
-![Buyer Dashboard](./previewimages/buyerdashboard.jpg)
-![Farmer Dashboard](./previewimages/farmerdashboard.jpg)
-![Login Page](./previewimages/loginpage.jpg)
+![Homepage](./public/previewimages/Homepage.jpg)
+![Buyer Dashboard](./public/previewimages/BuyerDashboard.jpg)
+![Farmer Dashboard](./public/previewimages/FarmerDashboard.jpg)
+![Login Page](./public/previewimages/LoginPage.jpg)
 
 ## 🔧 Installation & Setup
 1. **Clone the repository**
