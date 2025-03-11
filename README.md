@@ -64,7 +64,7 @@ The application will start at `http://localhost:3000`
 ## 👥 Contributors
 - [Sameer Gupta](https://github.com/guptasameer533)
 - [Vaishali Gupta](https://github.com/vaishali-gupta32)
-- [Kapil Gupta](https://github.com/kapil-gupta123)
+- [Kapil Gupta](https://github.com/kapilgupta20)
 - [Ayush Kumar Singh]
 - [Sarthak Khandelwal]
 - [Aditya Rai]
