@@ -1,38 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# KisanMitra
 
-## Getting Started
+[Live Demo](https://kisanmitra-tau.vercel.app/)
 
-First, run the development server:
+KisanMitra is a smart contract-based farming platform that bridges the gap between farmers and buyers. The platform enables secure, transparent, and efficient transactions by allowing users to negotiate, compare pricing, and form contracts before cropping. This ensures profitable outcomes for both parties involved.
 
+## 📌 Features
+- **Role-Based System:** Seamless registration for Farmers and Buyers.
+- **Smart Contract Integration:** Secure and transparent contract formation.
+- **Negotiation System:** Efficient negotiation process for better pricing.
+- **Pricing Comparison:** Compare prices to get the best deals.
+- **User Authentication:** Secure login and registration.
+- **State Selection:** Users can select their state for regional relevance.
+
+## 💻 Technologies Used
+- **Frontend:** Next.js, Tailwind CSS
+- **Backend:** Node.js, Express.js, MongoDB
+- **Blockchain:** Smart Contracts (for transaction security)
+- **Authentication:** JWT-based Authentication
+- **Deployment:** Vercel (Frontend), Render (Backend)
+
+## 🔧 Installation & Setup
+1. **Clone the repository**
+```bash
+https://github.com/your-username/kisanmitra.git
+```
+2. **Navigate to the project directory**
+```bash
+cd kisanmitra
+```
+3. **Install dependencies**
+```bash
+npm install
+```
+4. **Configure environment variables**
+Create a `.env` file in the root directory and add your environment variables as shown below:
+```
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+5. **Run the application**
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+The application will start at `http://localhost:3000`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 Usage
+- Farmers can register and create contracts for their crops.
+- Buyers can view the contracts, compare prices, and negotiate with farmers.
+- Both parties can agree on a contract before cropping to ensure profits.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Deployment
+- The frontend is deployed on **Vercel**.
+- The backend is deployed on **Render**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🤝 Contributing
+Contributions are welcome! Please fork this repository and submit a pull request for review.
 
-## Learn More
+## 📜 License
+This project is licensed under the MIT License.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Fday
+## 📧 Contact
+If you have any questions or suggestions, feel free to reach out at `guptasameer533@gmail.com`.
 
