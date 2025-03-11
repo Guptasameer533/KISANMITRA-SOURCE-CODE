@@ -5,16 +5,14 @@ import { Listing, Bid } from '@/app/fdashboard/listing/types'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+
 
 export default function FarmerDashboard() {
   const [listings, setListings] = useState<Listing[]>([])  // Empty initially
-  const [selectedBid, setSelectedBid] = useState<Bid | null>(null)
+  // const [selectedBid, setSelectedBid] = useState<Bid | null>(null)
   const [showContractDialog, setShowContractDialog] = useState(false)
-  const [contractDetails, setContractDetails] = useState({ deliveryDate: '', paymentTerms: '', additionalNotes: '' })
+  // const [contractDetails, setContractDetails] = useState({ deliveryDate: '', paymentTerms: '', additionalNotes: '' })
   const [loading, setLoading] = useState(true) // Loading state
   const [error, setError] = useState<string | null>(null)
   const [email, setEmail] = useState<string | null>(null)  // Store email here
@@ -33,14 +31,14 @@ export default function FarmerDashboard() {
     if (email) {
       const fetchListings = async () => {
         try {
-          const response = await fetch(`http://172.22.25.168:8001/a/${email}`)
+          const response = await fetch(`https://7kwg8g5n-8000.inc1.devtunnels.ms/fdashboard/listings/view/${email}`)
           if (!response.ok) {
             throw new Error('Failed to fetch listings')
           }
           const data: Listing[] = await response.json()
           setListings(data)
         } catch (error) {
-          // setError('Error fetching listings: ' + error.message)
+          setError('Error fetching listings: ' + error)
           console.log("error")
         } finally {
           setLoading(false)
@@ -69,18 +67,18 @@ export default function FarmerDashboard() {
       const listing = listings.find(l => l._id === listingId)
       const bid = listing?.bids[bidIndex]
       if (bid) {
-        setSelectedBid(bid)
+        // setSelectedBid(bid)
         setShowContractDialog(true)
       }
     }
   }
 
-  const handleContractSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    console.log('Contract details:', { ...contractDetails, bid: selectedBid })
-    setShowContractDialog(false)
-    setContractDetails({ deliveryDate: '', paymentTerms: '', additionalNotes: '' })
-  }
+  // const handleContractSubmit = (e: React.FormEvent) => {
+  //   e.preventDefault()
+  //   console.log('Contract details:', { ...contractDetails, bid: selectedBid })
+  //   setShowContractDialog(false)
+  //   setContractDetails({ deliveryDate: '', paymentTerms: '', additionalNotes: '' })
+  // }
 
   if (loading) {
     return <div>Loading...</div>
@@ -129,7 +127,7 @@ export default function FarmerDashboard() {
                       )}
                       {bid.status === 'negotiating' && (
                         <div className="mt-2">
-                          <p className="mb-2">Buyer's phone: {bid.bmobile}</p>
+                          <p className="mb-2">Buyer phone: {bid.bmobile}</p>
                           <div className="flex justify-end space-x-2">
                             <Button onClick={() => handleStatusChange(listing._id, index, 'rejected')} variant="outline" className="text-white border-black hover:bg-black hover:text-white shadow-[0_2px_4px_rgba(0,0,0,0.2)]">Reject</Button>
                             <Button onClick={() => handleStatusChange(listing._id, index, 'accepted')} variant="outline" className="text-white border-black hover:bg-black hover:text-white shadow-[0_2px_4px_rgba(0,0,0,0.2)]">Accept</Button>

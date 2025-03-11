@@ -7,6 +7,7 @@ import Link from "next/link"
 import { register } from "@/app/actions/register"
 import Header from "@/components/layout/header"
 import Footer from "@/components/layout/footer"
+import Image from 'next/image'
 
 const STATES = [
   "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
@@ -62,7 +63,7 @@ export default function Register() {
       <Header />
       <main className="flex-1 flex items-center justify-center relative">
         <div className="absolute inset-0 -z-10">
-          <img
+          <Image
             src="\resources\background1.jpeg"
             alt="Farm landscape"
             className="w-full h-full object-cover"

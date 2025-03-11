@@ -6,7 +6,7 @@ export async function connectDB() {
   if (isConnected) return;
 
   try {
-    await mongoose.connect(process.env.MONGODB_URI as string);
+    await mongoose.connect("mongodb+srv://Kapil:Nirvana1640@cluster0.sqxm0.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
     isConnected = true;
     console.log("Connected to MongoDB (Main Database)");
   } catch (error) {

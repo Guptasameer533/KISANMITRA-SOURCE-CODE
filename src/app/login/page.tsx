@@ -103,7 +103,7 @@ export default function Login() {
                 required
                 className="w-full py-2 px-3 border rounded-md text-gray-700"
               >
-                <option value="" disabled selected>
+                <option value="" disabled >
                   Select Role
                 </option>
                 <option value="farmer">Farmer</option>

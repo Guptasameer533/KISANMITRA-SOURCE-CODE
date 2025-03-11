@@ -6,7 +6,7 @@ export default function CookiePolicy() {
   return (
     <div className="min-h-screen flex flex-col relative">
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src="/farm-background.jpg"
           alt="Farm landscape"
           className="w-full h-full object-cover"

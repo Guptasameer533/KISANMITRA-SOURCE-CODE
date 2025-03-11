@@ -1,7 +1,9 @@
 // localStorageService.ts
 
+import { UserData } from "next-auth/providers/42-school";
+
 // Save user data in localStorage
-export const saveUserData = (data: any) => {
+export const saveUserData = (data: UserData) => {
     try {
       localStorage.setItem('userData', JSON.stringify(data)); // Store the data as a JSON string
     } catch (error) {
@@ -10,7 +12,7 @@ export const saveUserData = (data: any) => {
   };
   
   // Retrieve user data from localStorage
-  export const getUserData = (): any => {
+  export const getUserData = (): UserData | null => {
     try {
       const userData = localStorage.getItem('userData');
       console.log(userData);

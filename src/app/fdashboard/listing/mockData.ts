@@ -5,6 +5,7 @@ export interface Listing {
   price: number;
   quantity: number;
   unit: string;
+
 }
 
 export interface InterestForm {

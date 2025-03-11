@@ -69,8 +69,8 @@ export default function Footer() {
         <Image
           src="/resources/background5.jpeg"
           alt="Footer background"
-          layout="fill"
-          objectFit="cover"
+          fill
+  style={{ objectFit: "cover" }}
           className="opacity-30"
         />
       </div>

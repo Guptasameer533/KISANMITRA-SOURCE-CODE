@@ -46,6 +46,7 @@ export default function Header() {
           <Link href="/help" className="text-sm font-medium text-white hover:text-primary">
             Help
           </Link>
+           
           <Link href="/contact" className="text-sm font-medium text-white hover:text-primary">
             Contact Us
           </Link>
@@ -77,3 +78,4 @@ export default function Header() {
     </header>
   );
 }
+

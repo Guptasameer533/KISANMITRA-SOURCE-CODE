@@ -1,14 +1,29 @@
+// import { UserData } from 'next-auth/providers/42-school'
+// import { UserInfo } from 'os'
 import { useState, useEffect } from 'react'
-import { Interest } from '../types'
 
 interface ContractFinalizationPopupProps {
   interestId: number
   onClose: () => void
   onFinalize: () => void
 }
+interface FarmerDetails {
+  name: string;
+  email: string;
+  phoneNumber: string;
+  location: string;
+  crop: string;
+  quantity: string;
+  unit: string;
+  price: string;
+  expectedDelivery: string;
+}
+
 
 export default function ContractFinalizationPopup({ interestId, onClose, onFinalize }: ContractFinalizationPopupProps) {
-  const [farmerDetails, setFarmerDetails] = useState<any>(null)
+  const [farmerDetails, setFarmerDetails] = useState<FarmerDetails | null>(null);
+
+  // const [farmerDetails, setFarmerDetails] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
@@ -22,9 +37,10 @@ export default function ContractFinalizationPopup({ interestId, onClose, onFinal
         const data = await response.json()
         setFarmerDetails(data)
         setLoading(false)
-      } catch (err) {
-        setError('Failed to load farmer details. Please try again.')
+      } catch (error: unknown) {
+        setError('Failed to load farmer details. Please try again.');
         setLoading(false)
+        console.log(error)
       }
     }
 

@@ -3,16 +3,36 @@
 import { useState, useEffect } from 'react'
 import { DashboardLayout } from '@/components/dashboard-layout'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Users, List, AlertTriangle, Sprout, Cloud } from 'lucide-react'
+import { Users, List, AlertTriangle } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 import { PageBackground } from '@/components/PageBackground'
+// import { Listing } from './listing/mockData'
 
 export default function DashboardPage() {
-  const [listings, setListings] = useState<any[]>([]) // Ensure listings is always an array
+  const [listings, setListings] = useState<Listing[]>([]) // Ensure listings is always an array
   const [loading, setLoading] = useState(true) // Track the loading state for the API request
   const [error, setError] = useState<string | null>(null) // Handle errors
+
+  interface Listing {
+    id: string;              // Unique identifier for the listing
+    title: string;            // Title of the listing (e.g., product name, crop name)
+    description: string;       // Description of the listing
+    price: number;             // Price of the item
+    location: string;          // Location where the listing is available
+    category?: string;         // Optional category for better classification
+    contactInfo?: {
+      name: string;            // Contact person's name
+      phone: string;            // Contact phone number
+      email?: string;           // Optional contact email
+    };
+    croptype:string;
+    status: 'Pending' | 'Accepted' | 'Rejected';
+    quantity: string;
+
+  }
+  
 
   // Fetch listings from the API
   useEffect(() => {
@@ -24,7 +44,7 @@ export default function DashboardPage() {
         try {
           console.log("API call started...");
           setLoading(true) // Set loading to true when the API call starts
-          const response = await fetch(`http://172.22.25.168:8001/a/${email}`)
+          const response = await fetch(`https://7kwg8g5n-8000.inc1.devtunnels.ms/fdashboard/listings/view/${email}`)
           
           if (!response.ok) {
             throw new Error('Failed to fetch listings')
@@ -41,7 +61,7 @@ export default function DashboardPage() {
             setError('Error: Data is not in the expected format');
           }
 
-        } catch (error: any) {
+        } catch (error) {
           if (error instanceof Error) {
             console.error("Error fetching listings:", error.message);  // Now TypeScript knows 'error' has a 'message' property
             setError(error.message);  // Set the error message
@@ -122,7 +142,7 @@ export default function DashboardPage() {
           ) : (
             <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
               {listings.length > 0 ? (
-                listings.map((listing: any) => {
+                listings.map((listing: Listing) => {
                   return (
                     <Card key={listing.id} className="bg-white/80 backdrop-blur-sm shadow-[0_4px_8px_rgba(0,0,0,0.2)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.3)] transition-shadow duration-300">
                       <CardHeader>

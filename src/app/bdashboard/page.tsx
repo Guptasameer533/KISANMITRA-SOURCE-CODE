@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import MarketTrends from './components/MarketTrends'
 
 export default function Dashboard() {
   return (

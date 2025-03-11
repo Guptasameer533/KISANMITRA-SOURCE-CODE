@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { DashboardLayout } from '@/components/dashboard-layout';
-import { Button } from '@/components/ui/button';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { PageBackground } from '@/components/PageBackground';
 
@@ -55,8 +54,8 @@ export default function ContractsPage() {
           console.warn('Expected an array but got:', data);
           setContracts([]); // Handle case where no contracts are returned
         }
-      } catch (err: any) {
-        setError(err.message || 'Something went wrong.');
+      } catch (err) {
+        setError('Something went wrong.');
         console.error('Error fetching contracts:', err);
       } finally {
         setLoading(false);

@@ -4,10 +4,12 @@ import { connectDB } from "@/lib/mongodb";
 import User from "@/models/User";
 import bcrypt from "bcryptjs";
 
-const dbName = "main"; // Your database name
+// const dbName = "main"; // Your database name
 
 // Call connectDB and pass the dbName
 await connectDB();
+
+
 
 export const register = async (values: {
   fullName: string;
@@ -55,10 +57,10 @@ export const register = async (values: {
     delete userObject.__v; // Remove Mongoose internal field
 
     return { success: true, user: savedUser.toObject() };
-  } catch (error: any) {
+  } catch (error) {
     // Log validation errors
-    if (error.name === "ValidationError") {
-      const errors = Object.values(error.errors).map((err: any) => err.message);
+    if (error === "ValidationError") {
+      const errors = Object.values(error).map((err) => err);
       return { error: errors.join(", ") };
     }
 

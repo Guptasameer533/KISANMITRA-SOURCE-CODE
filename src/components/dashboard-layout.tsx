@@ -3,9 +3,8 @@
 import { ReactNode, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from '@/components/ui/sidebar';
-import { Button } from '@/components/ui/button';
-import { MoonIcon, SunIcon, LayoutDashboard, List, FileCodeIcon as FileContract, Cloud, Sprout, Award, Truck } from 'lucide-react';
-import { useTheme } from 'next-themes';
+
+import {LayoutDashboard, FileCodeIcon as FileContract, Cloud, Sprout, Award, Truck } from 'lucide-react';
 import Header from '@/components/layout/header';  
 import Footer from '@/components/Footer';
 
@@ -19,7 +18,7 @@ const navItems = [
 ];
 
 export function DashboardLayout({ children }: { children: ReactNode }) {
-  const { setTheme, theme } = useTheme();
+  // const { setTheme, theme } = useTheme();
   
   // State to check if the component has mounted to avoid SSR mismatches
   const [mounted, setMounted] = useState(false);
