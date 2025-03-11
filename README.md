@@ -66,8 +66,8 @@ The application will start at `http://localhost:3000`
 - [Vaishali Gupta](https://github.com/vaishali-gupta32)
 - [Kapil Gupta](https://github.com/kapilgupta20)
 - Ayush Kumar Singh
-- Sarthak Khandelwal
-- Aditya Rai
+- [Sarthak Khandelwal](github.com/sarthak-436)
+- [Aditya Rai](https://github.com/code-samadi)
 
 ## 🤝 Contributing
 Contributions are welcome! Please fork this repository and submit a pull request for review.
