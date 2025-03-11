@@ -15,7 +15,7 @@ export default function TermsOfService() {
       </div>
       <Header />
       <main className="flex-1 container mx-auto px-4 py-16">
-        <div className="bg-white/90 p-8 rounded-lg shadow-lg">
+        <div className="bg-white/90 p-8 rounded-lg shadow-lg text-gray-950">
           <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
           <div className="prose max-w-none">
             <Image
