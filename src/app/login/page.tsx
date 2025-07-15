@@ -64,7 +64,9 @@ export default function Login() {
 
       <main className="flex items-center justify-center min-h-screen relative z-10">
         <div className="max-w-md w-full bg-white/90 rounded-lg p-8 shadow-lg">
-          <h2 className="text-3xl font-semibold mb-6 text-gray-800">Welcome Back</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-gray-800">
+            Welcome Back
+          </h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             {error && (
               <div className="p-3 text-sm text-red-500 bg-red-100 rounded-md">
@@ -103,7 +105,7 @@ export default function Login() {
                 required
                 className="w-full py-2 px-3 border rounded-md text-gray-700"
               >
-                <option value="" disabled >
+                <option value="" disabled>
                   Select Role
                 </option>
                 <option value="farmer">Farmer</option>
@@ -119,14 +121,29 @@ export default function Login() {
             </button>
 
             <div className="flex justify-between text-sm mt-4">
-              <Link href="/forgot-password" className="text-blue-500 hover:text-blue-700">
+              <Link
+                href="/forgot-password"
+                className="text-blue-500 hover:text-blue-700"
+              >
                 Forgot Password?
               </Link>
-              <Link href="/register" className="text-green-500 hover:text-green-700">
-                Create Account
+              <Link
+                href="/register"
+                className="text-green-500 hover:text-green-700"
+              >
+                Create Acc
               </Link>
             </div>
           </form>
+          <div className="text-sm mt-4 text-black">
+            <p className="font-semibold">Credentials for testing:</p>
+            <p>
+              ID: Tester23@gmail.com
+            </p>
+            <p>
+              Password: 1234
+            </p>
+          </div>
         </div>
       </main>
 
