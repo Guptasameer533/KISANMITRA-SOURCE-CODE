@@ -70,7 +70,7 @@ export default function Footer() {
           src="/resources/background5.jpeg"
           alt="Footer background"
           fill
-  style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover" }}
           className="opacity-30"
         />
       </div>

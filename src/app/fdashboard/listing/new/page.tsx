@@ -39,7 +39,7 @@ export default function NewListingPage() {
     }
 
     try {
-      const response = await fetch('/api/listing', {
+      const response = await fetch('https://localhost:8000/fdashboard/listings/addnew/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(listing),

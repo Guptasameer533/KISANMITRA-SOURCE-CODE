@@ -9,7 +9,7 @@ export default function Footer() {
           src="/resources/background5.jpeg"
           alt="Footer background"
           fill
-  style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover" }}
           quality={100}
         />
         <div className="absolute inset-0 bg-black/60" />

@@ -63,11 +63,14 @@ export default function Register() {
       <Header />
       <main className="flex-1 flex items-center justify-center relative">
         <div className="absolute inset-0 -z-10">
-          <Image
-            src="\resources\background1.jpeg"
-            alt="Farm landscape"
-            className="w-full h-full object-cover"
-          />
+        <Image
+          src="/resources/background1.jpeg"
+          alt="Farm landscape"
+          width={1920}
+          height={1080}
+          className="w-full h-full object-cover"
+/>
+
           <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
         </div>
         

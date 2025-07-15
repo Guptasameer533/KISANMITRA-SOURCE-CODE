@@ -44,8 +44,16 @@ export default function DashboardPage() {
         try {
           console.log("API call started...");
           setLoading(true) // Set loading to true when the API call starts
-          const response = await fetch(`https://7kwg8g5n-8000.inc1.devtunnels.ms/fdashboard/listings/view/${email}`)
+          // const response = await fetch(`https://localhost:8000/fdashboard/listings/view/`)
           
+          const response = await fetch("https://localhost:8000/fdashboard/listings/view/", {
+            method: "POST",  // Use POST method
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email }), // Send email in request body
+        });
+
           if (!response.ok) {
             throw new Error('Failed to fetch listings')
           }

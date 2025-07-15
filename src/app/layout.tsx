@@ -19,6 +19,7 @@ export const metadata: Metadata = {
   description: "KisanMitra is a platform for the farmer and the buyer to make right deals at right price",
 };
 
+
 export default function RootLayout({
   children,
 }: Readonly<{
